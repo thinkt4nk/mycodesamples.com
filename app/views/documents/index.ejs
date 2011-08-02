@@ -1,0 +1,9 @@
+<h1>Index of document</h1>
+
+<% documents.forEach(function (document) { %>
+  document #<%= document.id %>
+  <%- link_to('Edit', path_to.edit_document(document)) %>
+  <%- link_to('Delete', path_to.document(document), {method: 'delete', remote: true, jsonp: '(function (u) {location.href = u;})'}) %><br/>
+<% }); %>
+
+<%- link_to('New document', path_to.new_document) %>

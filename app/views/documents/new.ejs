@@ -1,0 +1,7 @@
+<h1>New document</h1>
+
+<% form_for(document, {action: path_to.documents, method: 'POST', id: "document_form"}, function (form) { %>
+  <%- partial('documents/form.ejs', {locals: {form: form, document: document}}) %>
+  <%- form.submit('Create document') %> or
+  <%- link_to('Cancel', path_to.documents) %>
+<% });%>

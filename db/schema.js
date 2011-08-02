@@ -32,3 +32,16 @@ mongoose.model("Comment", CommentSchema);
 ['User'/*, 'Post', 'Comment'*/].forEach(function (m) {
     module.exports[m] = mongoose.model(m);
 });
+
+
+/**
+ * Document
+ */
+var DocumentSchema = new Schema;
+DocumentSchema.add({
+    slides: { type: Array },
+    uri: { type: String },
+    title: { type: String }
+});
+mongoose.model("Document", DocumentSchema);
+module.exports["Document"] = mongoose.model("Document");module.exports["Document"].modelName = "Document"

@@ -1,0 +1,7 @@
+<h1>Edit document</h1>
+
+<% form_for(document, {action: path_to.document(document), method: 'PUT', id: "document_form"}, function (form) { %>
+  <%- partial('documents/form.ejs', {locals: {form: form, document: document}}) %>
+  <%- form.submit('Update document') %> or
+  <%- link_to('Cancel', path_to.document(document)) %>
+<% });%>

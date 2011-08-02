@@ -1,0 +1,4 @@
+<h1>Details of document</h1>
+<%- link_to('Edit', path_to.edit_document(document)) %>
+<%- link_to('Delete', path_to.document(document), {method: 'delete', remote: true, jsonp: '(function (u) { location.href = u; })'}) %><br/>
+<%- link_to('Back to index', path_to.documents) %>
