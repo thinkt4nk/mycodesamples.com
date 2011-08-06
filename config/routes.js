@@ -3,4 +3,5 @@ exports.routes = function (map) {
 		admin.resources('documents');
 	});
     //map.resources('documents');
+    map.resources('slides');
 };

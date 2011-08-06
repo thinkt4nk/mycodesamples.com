@@ -45,3 +45,15 @@ DocumentSchema.add({
 });
 mongoose.model("Document", DocumentSchema);
 module.exports["Document"] = mongoose.model("Document");module.exports["Document"].modelName = "Document"
+
+
+/**
+ * Slide
+ */
+var SlideSchema = new Schema;
+SlideSchema.add({
+    title: { type: String },
+    content: { type: String }
+});
+mongoose.model("Slide", SlideSchema);
+module.exports["Slide"] = mongoose.model("Slide");module.exports["Slide"].modelName = "Slide"

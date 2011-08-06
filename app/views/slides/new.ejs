@@ -1,0 +1,7 @@
+<h1>New slide</h1>
+
+<% form_for(slide, {action: path_to.slides, method: 'POST', id: "slide_form"}, function (form) { %>
+  <%- partial('slides/form.ejs', {locals: {form: form, slide: slide}}) %>
+  <%- form.submit('Create slide') %> or
+  <%- link_to('Cancel', path_to.slides) %>
+<% });%>

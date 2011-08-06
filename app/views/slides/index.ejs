@@ -1,0 +1,9 @@
+<h1>Index of slide</h1>
+
+<% slides.forEach(function (slide) { %>
+  slide #<%= slide.id %>
+  <%- link_to('Edit', path_to.edit_slide(slide)) %>
+  <%- link_to('Delete', path_to.slide(slide), {method: 'delete', remote: true, jsonp: '(function (u) {location.href = u;})'}) %><br/>
+<% }); %>
+
+<%- link_to('New slide', path_to.new_slide) %>

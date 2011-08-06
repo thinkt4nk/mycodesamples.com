@@ -1,0 +1,4 @@
+<h1>Details of slide</h1>
+<%- link_to('Edit', path_to.edit_slide(slide)) %>
+<%- link_to('Delete', path_to.slide(slide), {method: 'delete', remote: true, jsonp: '(function (u) { location.href = u; })'}) %><br/>
+<%- link_to('Back to index', path_to.slides) %>
